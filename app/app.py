@@ -26,7 +26,7 @@ app = Flask(__name__)
 # Load the environment variables to get the file name and tab name
 PLANT_FILENAME = os.getenv("PLANT_FILENAME", "egrid2022_data.xlsx")
 TAB_NAME = os.getenv("TAB_NAME", "PLNT22")
-IGNORE_HEALTH_CHECKS = os.getenv("IGNORE_HEALTH_CHECKS", False)
+IGNORE_HEALTH_CHECKS = os.getenv("IGNORE_HEALTH_CHECKS", True)
 
 
 @app.route("/")
