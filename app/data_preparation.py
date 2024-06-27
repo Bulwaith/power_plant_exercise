@@ -53,6 +53,7 @@ df.columns = relevant_columns.values()
 
 # We do this later, after filtering on the columns
 df.fillna(0, inplace=True)
+# Infer the data types - this is a performance optimization to avoid the warning
 df = df.infer_objects(copy=False)
 
 total_annual_net_generation = df["annual_net_generation"].sum()

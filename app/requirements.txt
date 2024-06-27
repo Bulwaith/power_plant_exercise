@@ -1,5 +1,5 @@
 pandas
 flask
-sqlalchemy
+openpyxl
 pytest
 gunicorn
