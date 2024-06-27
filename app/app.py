@@ -35,6 +35,12 @@ def hello_world():
     return "Hello, World!!"
 
 
+@app.route("/get-plants/<state>")
+def get_plants(state):
+    logger.info(f"Getting plants for the state: {state.upper()}")
+    return f"Getting plants for the state: {state.upper()}"
+
+
 try:
     print("Starting the application")
     logger.info("Starting the application")
