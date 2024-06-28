@@ -6,6 +6,15 @@ pd.set_option("future.no_silent_downcasting", True)
 logger = logging.getLogger("power_plants")
 
 
+# This class will handle the file operations.
+# - Read the file and process the data
+# - Calculate the annual net generation percentage for each plant
+# - Run health checks on the data
+# Notes:
+# - The file could be downloaded from the internet or provided by the user
+# - The file could be in different formats, like CSV, Excel, etc.
+# - The data could be in different tabs in the file
+# - The methods could be better organized into smaller methods and allow better tests
 class FileService:
     def __init__(self, file_path, tab_name):
         self.file_path = f"app/{file_path}"
@@ -100,3 +109,6 @@ class FileService:
 
         logger.info("Health checks passed. Move on. ✅")
         return True
+
+    def get_plant_data(self):
+        return self.plants_data
